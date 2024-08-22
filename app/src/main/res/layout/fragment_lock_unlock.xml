@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/dimen_16"
+    tools:context=".lock_unlock.fragment.LockUnlockFragment">
+
+    <Button
+        android:id="@+id/button_lock"
+        android:layout_width="@dimen/dimen_142"
+        android:layout_height="@dimen/dimen_52"
+        android:drawableLeft="@drawable/ic_outline_lock_24"
+        android:drawableTint="@color/white"
+        android:elevation="@dimen/dimen_8"
+        android:text="@string/lock_label"
+        app:layout_constraintBottom_toTopOf="@id/timer_content"
+        app:layout_constraintEnd_toStartOf="@id/button_unlock"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_unlock"
+        android:layout_width="@dimen/dimen_142"
+        android:layout_height="@dimen/dimen_52"
+        android:drawableLeft="@drawable/ic_outline_lock_open_24"
+        android:drawableTint="@color/white"
+        android:elevation="@dimen/dimen_8"
+        android:text="@string/unlock_label"
+        app:layout_constraintBottom_toTopOf="@id/timer_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/button_lock"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/timer_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_lock"
+        tools:text="20s" />
+</androidx.constraintlayout.widget.ConstraintLayout>

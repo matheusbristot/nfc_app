@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">LockThings</string>
+
+    <!-- Register Texts -->
+    <string name="register_fragment_title">Registre seu cadeado</string>
+    <string name="add_new_lock_id_label">Atribuir chave ao cadeado"</string>
+    <string name="add_new_lock_id_hint">Insira a chave</string>
+    <string name="add_new_lock_success_message">Cadeado registrado com sucesso!</string>
+    <string name="add_new_lock_error_message">Código do cadeado em inválido!\nPor favor insira um código válido.</string>
+
+
+    <!-- Lock Unlock Texts -->
+    <string name="lock_unlock_fragment_title">Escolha qual ação realizar</string>
+    <string name="unlock_label">Abrir</string>
+    <string name="lock_label">Trancar</string>
+    <string name="warning_title">Atenção</string>
+    <string name="success_title">Sucesso</string>
+    <string name="lock_unlock_wait_description_by_action">Agora, aproxime a tag NFC com identificador <b>%s</b> para <b>%s</b></string>
+    <string name="tag_not_equals_message">A tag que encontramos <b>%s</b> não corresponde a que registrou.</string>
+    <string name="tag_timeout_message">Ação de <b>%s</b> foi cancelada por exceder o tempo, tente novamente.</string>
+    <string name="tag_success_message">Ação de <b>%s</b> foi realizada com sucesso</string>
+    <string name="device_not_support_nfc_message">Este aparelho não tem suporte para NFC</string>
+    <string name="turn_on_nfc_message">Abra as configurções e ative o NFC</string>
+    <string name="positive_button">Ok</string>
+</resources>

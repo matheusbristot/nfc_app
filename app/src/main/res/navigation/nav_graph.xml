@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/RegisterFragment">
+    <dialog
+        android:id="@+id/waitRegisterBottomSheet"
+        android:name="com.bristot.lockthings.lock_unlock.bottomsheet.WaitConnectTagBottomSheet"
+        android:label="FilterByBottomSheet"
+        tools:layout="@layout/bottom_sheet_wait_regirested_tag">
+        <argument
+            android:name="lockId"
+            app:argType="string" />
+        <argument
+            android:name="action"
+            app:argType="string" />
+    </dialog>
+    <fragment
+        android:id="@+id/RegisterFragment"
+        android:name="com.bristot.lockthings.register.LockIdRegisterFragment"
+        android:label="@string/register_fragment_title"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_RegisterFragment_to_LockUnlockFragment"
+            app:destination="@id/LockUnlockFragment"
+            app:enterAnim="@anim/enter_fragment"
+            app:exitAnim="@anim/exit_animation"
+            app:popEnterAnim="@anim/pop_enter_fragment"
+            app:popExitAnim="@anim/exit_animation" />
+    </fragment>
+    <fragment
+        android:id="@+id/LockUnlockFragment"
+        android:name="com.bristot.lockthings.lock_unlock.fragment.LockUnlockFragment"
+        android:label="@string/lock_unlock_fragment_title"
+        tools:layout="@layout/fragment_lock_unlock">
+
+        <argument
+            android:name="lockId"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_LockUnlockFragment_to_RegisterFragment"
+            app:destination="@id/RegisterFragment" />
+
+        <action
+            android:id="@+id/action_lockUnlockFragment_to_waitRegisterBottomSheet"
+            app:destination="@id/waitRegisterBottomSheet" />
+    </fragment>
+</navigation>
